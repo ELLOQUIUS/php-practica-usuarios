@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS phpmiguel
+CREATE DATABASE IF NOT EXISTS miguel_usuarios
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_general_ci;
 
-USE phpmiguel;
+USE miguel_usuarios;
 
 CREATE TABLE IF NOT EXISTS usuarios (
   cedula INT(10) PRIMARY KEY NOT NULL,

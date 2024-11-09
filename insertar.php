@@ -1,58 +1,47 @@
    
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Reporte de usuario</th>
-                </tr>
-            </thead>    
-            <tbody>
-                <tr>
-                    <td>Cedula:</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Nombre:</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Apellido:</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Email:</td>
-                    <td><input type="email"></td>
-                </tr>
-                <tr>
-                    <td>Telefono:</td>
-                    <td><input type="number"></td>
-                </tr>
-                <tr>
-                    <td>Direccion:</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Sexo:</td>
-                    <td>
-                        <input type="radio" name="sexo" value="hombre">Hombre <br>
-                        <input type="radio" name="sexo" value="mujer">Mujer
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nacionalidad:</td>
-                    <td>
-                        <select id="opciones" name="opciones">
-                            <option value="Venezolano">Venezolano</option>
-                            <option value="Otro">Otro</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button>Registrar</button>
-                    </td>
-                    <td>
-                        <button>Limpiar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>Insertar</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <?php include './menu.php' ?>
+        <form method="post" action="./insertar_logica.php">
+            <label id="cedula">Cédula: <input id="cedula" name="cedula"
+            type="text" required /></label>
+            <label id="nombre">Nombre: <input id="nombre" name="nombre"
+            type="text" required /></label>
+            <label id="apellido">Apellido: <input id="apellido"
+            name="apellido" type="text" required /></label>
+            <label id="direccion">Direccion: <textarea id="direccion"
+            name="direccion" required rows="5" cols="40"></textarea></label>
+            <label id="email">Email: <input id="email" name="email"
+            type="text" required /></label>
+            <label id="telefono">Telefono: <input id="telefono"
+            name="telefono" type="text" required /></label>
+            <legend>Sexo:</legend>
+
+            <input type="radio" name="sexo" id="F" value="F" required>
+            <label for="F">Femenino</label>
+            <input type="radio" name="sexo" id="M" value="M">
+            <label for="M">Masculino</label>
+            <label id="nacionalidad">Nacionalidad:
+            <select id="nacionalidad" name="nacionalidad" required>
+            <option value="">Elige Una</option>
+            <option value="venezolano">Venezolano</option>
+            <option value="uruguayo">Uruguayo</option>
+            <option value="chileno">Chileno</option>
+            <option value="argentino">Argentino</option>
+            </select>
+            </label>
+            <label id="ciudad">Ciudad: <input id="ciudad" name="ciudad"
+            type="text" required /></label>
+            <input id="registrar" name="Registrar" type="submit" />
+            <input id="limpiar" name="Limpiar" type="reset" />
+        </form>
+    </body>
+</html>
